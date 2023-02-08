@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Mi primer CV</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Mi primer CV" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.example.com" />
+    <meta property="og:image" content="http://www.example.com/image.jpg" />
+    <meta property="og:description" content="Este es un documento que cuenta cuales son los elementos semánticos más utilizados" />
+    <link rel="stylesheet" href="estilos.css">
+    <script defer src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400;0,600;0,900;1,100&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="topheader">
+        <nav class="topnav">
+            <a href="#" class="logo">
+                <img height="50" width="50" src="img/ojo puzzle.jpg" alt="ojo logo">
+                <div>
+                    Anastasia Harvey<br>
+                    Analista de Sistemas
+                </div>
+            </a>
+
+            <button class="open-menu" aria-label="Abrir menú">
+                <img height="30" width="30" src="img/menu.png" alt="abrir menú">
+            </button>
+
+            <ul class="menu">
+                <button class="close-menu" aria-label="Cerrar menú">
+                    <img height="30" width="30" src="img/cerrar.png" alt="cerrar menú">
+                </button>
+                <li><a href="#perfil" class="selected">Perfil</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="perfil" id="perfil" class="horizontal-padding vertical-padding">
+        <div class="perfil-info">
+            <h1 class="perfil-titulo">¡Hola! Soy <br /> Anastasia Harvey</h1>
+            <p class="perfil-detalle">
+                Analista de sistemas orientada a los resultados con excelentes habilidades de comunicación, así como una gran comprensión de los sistemas digitales y los procesos de la cadena de suministro.
+            </p>
+            <button class="perfil-boton">
+                Descargar CV
+            </button>
+        </div>
+
+        <span class="perfil-imagen">
+            <img class="perfil-img" src="img/Chiky.png" alt="foto perfil">   
+        </div>
+        <div class="perfil-img-line"></span>
+    </section>
+
+    <section class="experiencia" id="experiencia">
+        <img class="wave" src="img/wave.svg" alt="onda de apertura">
+            
+        <div class="experiencias-body">
+            <h2 class="experiencias-titulo">Experiencia Laboral y Académica</h2>
+            <div class="experiencias-grilla">
+                <div class="empty"></div>
+                <div class="linea"></div>
+                <div class="experiencia-trabajo">
+                    <div class="experiencia-fecha">Junio 2018 - Actualidad</div>
+                    <div class="experiencia-lugar">Reja Sistemas</div>
+                    <div class="experiencia-puesto">Analista de Sistemas</div>
+                    <div class="experiencia-descripción">
+                        <p>Estudio de los sistemas organizativos de los clientes. Traducciones de los requisitos de la empresa en diseños funcionales. Formación de personal y usuarios en programas de ordenador</p>
+                    </div>
+                </div>
+                <div class="experiencia experiencia_izquierda">
+                    <div class="experiencia-fecha">Abril 2017 - Mayo 2018</div>
+                    <div class="experiencia-lugar">Estudio Luna</div>
+                    <div class="experiencia-puesto">Analista de datos senior</div>
+                    <div class="experiencia-descripción">
+                        <p>Recopilación y análisis de datos con diversos marcos. Solución de problemas de software. Aplicación de técnicas estadísticas para diagnosticar problemas empresariales</p>
+                    </div>
+                </div>
+                <div class="linea"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="linea"></div>                
+                <div class="experiencia">
+                    <div class="experiencia-fecha">Febrero 2016 - Enero 2017</div>
+                    <div class="experiencia-lugar">Instituto de las Torres</div>
+                    <div class="experiencia-puesto">Certificado de posgrado</div>
+                    <div class="experiencia-descripción">
+                        <p>Certificado en Ingeniería de Procesos Empresariales. Adquisición de conocimientos sobre la optimización de sistemas y procesos de negocio con sistemas tecnológicos</p>
+                    </div>
+                </div>
+                <div class="experiencia experiencia_izquierda" >
+                    <div class="experiencia-fecha">Junio 2011 - Junio 2015</div>
+                    <div class="experiencia-lugar">Universidad de Torres</div>
+                    <div class="experiencia-puesto">Grado en Ciencias</div>
+                    <div class="experiencia-descripción">
+                        <p>Grado en Ingeniería Informática. Mención en Sistemas Empresariales. Coordinadora de Proyectos.</p>
+                    </div>
+                </div>
+                <div class="linea"></div>
+                <div class="empty"></div>
+            </div>
+        </div>
+        <img class="wave wave_bottom" src="img/wave.svg" alt="onda de cierre">   
+    </section>
+
+    <section class="habilidades" id="habilidades" class="horizontal-padding vertical-padding">        
+       <h2 class="habilidades-titulo">Habilidades</h2>
+
+       <ul class="aptitudes-lista">
+        <li class="aptitud">Desarrollo de software básico</li>
+        <li class="aptitud">Documentación de proyectos</li>
+        <li class="aptitud">Análisis de modelos de negocio</li>
+        <li class="aptitud">Resolución de problemas</li>
+        <li class="aptitud">Diseño de pruebas de calidad</li>
+        <li class="aptitud">Diseño de Investigación y formación de usuarios</li>
+       </ul>
+
+       <ul class="habilidades-lista">
+        <li class="habilidad">CSS</li>
+        <li class="habilidad">HTML</li>
+        <li class="habilidad">JavaScript</li>
+        <li class="habilidad">Python</li>
+        <li class="habilidad">Front-end</li>
+       </ul>
+    </section>
+
+    <footer class="contacto" id="contacto" class="horizontal-padding vertical-padding">
+        <h2 class="contacto-titulo">Contacto</h2>
+        <div class="contacto-detalle">
+            <div class="contacto-detalle-group">
+                <p class="contacto-etiqueta">Dirección:</p>
+                <p class="contacto-texto">Manchester,Inglaterra</p>
+            </div>
+            <div class="contacto-detalle-group">
+                <p class="contacto-etiqueta">E-mail:</p>
+                <p class="contacto-texto">hola@unsitiogenial.uk</p>
+            </div>
+            <div class="contacto-detalle-group">
+                <p class="contacto-texto">
+                    Deje su mensaje y con gusto le responderé
+                </p>
+            </div>
+        </div>
+
+        <form class="contacto-form">
+            <div class="contacto-form-group">
+                <label for="name">Nombre</label>
+                <input required type="text" name="name" id="name">
+            </div>
+            <div class="contacto-form-group">
+                <label for="email">E-mail</label>
+                <input required type="email" name="email" id="email">
+            </div>
+            <div class="contacto-form-group">
+                <label for="name">Mensaje</label>
+                <textarea required name="mensaje" id="mensaje" rows="6"></textarea>
+
+                <button type="submit" class="contacto-form-submit">Enviar</button>
+            </div>
+        </form>
+
+        <nav class="redes">
+            <ul class="redes-lista">
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-skype"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-rss"></i></a></li>
+            </ul>      
+        </nav>
+
+    </footer>
+
+    
+</body>
+</html>
+

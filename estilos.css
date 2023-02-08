@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400;0,600;0,900;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&family=Sofia+Sans:ital,wght@0,400;0,600;0,900;1,100&display=swap');
+
+:root {
+    --nord0: #2e3440; /*text-color*/
+    --nord1: #3b4252;
+    --nord2: #434c5e;
+    --nord3: #4c566a;
+    --nord4: #d8dee9; /*text-color-inverse*/
+    --nord5: #e5e9f0;
+    --nord6: #eceff4; /*theme-color*/
+    --nord7: #8fbcbb;
+    --nord8: #88c0d0;
+    --nord9: #81a1c1; 
+    --nord10:#5e81ac; /*primary-color*/
+    --nord11:#bf616a; /*secondary-color*/
+    --nord12:#d08770; 
+    --nord13:#ebcb8b;
+    --nord14:#a3bebc; /*navbar-shallow-color*/
+    --nord15:#b4bead; /*menu-mobile-background-color*/
+}
+
+:root {
+    --theme-color: #eceff4;
+    --primary-color: #5e81ac;
+    --secondary-color: #bf616a;
+    --text-color-inverse: #d8dee9;
+    --text-color: #2e3440;
+    --navbar-shallow-color: #a3bebc;
+    --menu-mobile-background-color: #b4bead;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Sofia Sans', sans-serif;
+    background-color: var(--nord6);
+    color: var(--text-color);
+    padding-top: 75px;
+}
+
+section [id] {
+    scroll-margin-top: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.horizontal-padding {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.vertical-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+@media (min-width: 900px) {
+    .horizontal-padding {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    
+    .vertical-padding {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+/* navbar */
+
+.topheader {
+    position: fixed;
+    background-color: var(--theme-color);
+    box-shadow: 0 4px 5px var(--navbar-shallow-color);
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+/* navbar-logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.logo img {
+    border-radius: 30%;
+    border: 1px solid var(--menu-mobile-background-color);
+    margin-right: 20px;
+}
+
+/* navbar-menu */
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 0 15px;
+}
+
+.menu a {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 50px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.menu a::after {
+    content: "";
+    background-color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    top: calc(100% + 4px);
+    width: 100%;
+    height: 4px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.menu a.selected::after,
+.menu a:hover::after {
+    opacity: 0.8;
+}
+
+.menu a:hover {
+    color: var(--primary-color);
+}
+
+.open-menu,
+.close-menu {
+    display: none;
+}
+
+/* perfil */
+
+.perfil {
+    text-align: center;
+}
+.perfil-info {
+    margin-bottom: 25px; 
+}
+
+.perfil-imagen {
+    position: relative;
+}
+
+.perfil-img {
+    width: 60%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.perfil-img-line {
+    background-color: var(--secondary-color);
+    height: 10px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.perfil-titulo {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--primary-color);
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+}
+
+.perfil-detalle {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.3;
+    max-width: 450px;
+    margin: 20px auto;
+    text-align: justify;
+}
+
+.perfil-boton {
+    background-color: var(--nord7);
+    border: 1px solid var(--nord3);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 var(--nord9);
+    color: var(--nord0);
+    font-family: 'Sofia Sans';
+    font-size: 15px;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.perfil-boton:hover {
+    filter: brightness(110%);
+}
+
+/* experiencias */
+
+.experiencia {
+    display: flex;
+    flex-direction: column;
+}
+
+.experiencias-body {
+    background-color: var(--secondary-color);
+    opacity: 0.8;
+    color: var(--text-color-inverse);
+}
+
+.wave {
+    width: 100%;
+    position: relative;
+    top: 1px;
+}
+
+.wave_bottom {
+    width: 100%;
+    transform: scaleY(-1);
+    top: -1px;
+}
+
+.experiencia-trabajo {
+    padding: 25px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.experiencias-titulo {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 25px;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    color: var(--nord13);
+}
+
+.experiencia-fecha {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--nord14);
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    margin: 5px 20px;
+}
+
+.experiencia-lugar {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    font-style: italic;
+    text-transform: uppercase;
+    margin: 5px 20px;
+}
+
+.experiencia-puesto {
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Noto Serif', serif;
+    font-style: bold;
+    margin: 10px 20px;
+}
+
+.experiencia-descripción {
+    font-weight: 200;
+    font-style: normal;
+    font-size: 18px;
+    margin: 10px 20px;
+    text-align: justify;
+    font-family: "Sofia Sans";
+}
+
+/* habilidades */
+
+.habilidades {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.habilidades-titulo {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+.habilidad {
+    font-size: 20px;
+    font-weight: 400;
+    box-shadow: 0 4px 10px var(--secondary-color);
+    border-radius: 40px;
+    padding: 0.5em 0.7em;
+    margin: 10px;
+}
+
+.habilidades-lista {
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* aptitudes */
+
+.aptitudes-lista {
+    justify-content: center;
+}
+
+.aptitud {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 10px;
+    align-items: none;
+}
+
+/* footer:contacto */
+
+.contacto {
+    background-color: var(--nord7);
+    color: var(--text-color-inverse);
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 25px;
+
+    display: grid;
+    gap: 25px;
+}
+
+.contacto p,
+.contacto h2,
+.contacto ul {
+    margin: 0;
+    padding: 0;
+}
+
+.contacto-titulo {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    color: var(--text-color-inverse);
+}
+
+.contacto-detalle, 
+.contacto-form {
+    display: grid;
+    gap: 20px;
+}
+
+.contacto-detalle-group,
+.contacto-form-group {
+    display: grid;
+    gap: 3px;
+}
+
+.contacto-etiqueta {
+    text-transform: uppercase;
+    font-family: 'Noto Serif', serif;
+    font-size: 15px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    border-radius: 7px;
+    border: none;
+    height: 30px;
+    padding: 5px 10px;
+}
+
+.contacto-form textarea {
+    height: auto;
+    resize:vertical;
+}
+
+.contacto-form-submit {
+    width: 100%;
+    height: 30px;
+
+    background-color: var(--nord13);
+    border-radius: 7px;
+    color: var(--text-color);
+    border: 1px solid var(--text-color-inverse);
+    cursor: pointer;
+    font-family: 'Sofia Sans';
+    font-size: 15px;
+    padding: 0.5em 1em;
+    text-align: center;
+    display: inline-block;
+}
+
+.contacto-form-submit:hover {
+    box-shadow: 0 0 16px var(--text-color-inverse);
+}
+
+.redes-lista {
+    list-style: none;
+
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.fa-brands,
+.fa-solid {
+    color: var(--secondary-color);
+
+}
+
+.fa-brands:hover,
+.fa-solid:hover {
+    color: var(--nord4);
+    filter: drop-shadow(0 0 5px var(--nord4));
+}
+
+/* media 
+navbar-menu */
+
+@media (max-width: 600px) {
+      .menu {
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        background-color: var(--menu-mobile-background-color);
+        height: 100%;
+        overflow-y: auto;
+
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+
+    .menu li {
+        padding: 0;
+    }
+
+    .menu a {
+        color: var(--text-color-inverse);
+        line-height: 60px;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+    }
+
+    .close-menu {
+        align-self: flex-end;
+        padding: 20px 15px;
+    }
+
+    .menu_opened {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .menu a::after {
+        content: none;
+    }
+    
+    .menu a:hover, 
+    .menu a.selected {
+        color: var(--secondary-color);
+    }
+}
+
+/* perfil */
+
+@media (min-width: 900px) {
+    .perfil-info {
+        margin-bottom: 0; 
+    }
+       
+    .perfil-img {
+        width: 80%;
+        max-width: 350px;
+        transform: scaleX(-1);
+        border-radius: 10px;
+        height: fit-content;
+    }
+
+    .perfil-img-line {
+        width: 80%;
+    }
+  
+    .perfil {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        max-width: 980px;
+        margin: 0 auto;
+        align-items: center;
+    }
+    
+    .perfil-titulo {
+        font-size: 40px;
+    }
+    
+    .perfil-detalle {
+        font-size: 20px;
+        margin: 30px 0;
+    }
+    
+    .perfil-boton {
+        font-size: 20px;
+        padding: 0.5em 1em;
+    }
+}
+
+/* experiencias */
+
+@media (min-width: 900px) {
+
+    .experiencias-titulo {
+        font-size: 35px;
+        margin: 35px 0;
+    }
+    
+    .experiencia-fecha {
+        font-size: 30px;
+    }
+    
+    .experiencia-lugar {
+        font-size: 25px;
+    }
+    
+    .experiencia-puesto {
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    
+    .experiencia-descripción {
+        font-size: 20px;
+        margin-top: 10px;
+        text-align: justify;
+        line-height: 1.3;
+    }
+
+    .experiencia-trabajo {
+        max-width: 800px;
+        padding: 0;
+    }
+
+    .experiencia_izquierda {
+        text-align: right;
+    }
+
+    .experiencias-grilla {
+        display: grid;
+        grid-template-columns: auto 2px auto;
+        gap: 20px 70px;
+        padding: 70px;
+        justify-content: center;
+        max-width: 980px;
+        margin: 0 auto;
+    }
+
+    .linea {
+        background-color: var(--text-color-inverse);
+        position: relative;
+    }
+
+    .linea::before,
+    .linea::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: var(--text-color-inverse);
+        border-radius: 50%;
+
+        position: absolute;
+        top: -20px;
+        left: -9px;
+    }
+
+    .linea::after {
+        top: 100%;
+        z-index: 1;
+    }
+}
+
+/* habilidades */
+
+@media (min-width: 900px) {
+    .habilidades-titulo {
+        font-size: 35px;
+        margin: 0 20px;
+    }
+}
+
+/* footer: contacto */
+
+@media (min-width: 900px) {
+    .contacto {
+        font-size: 20px;
+        padding: 70px;
+        max-width: 980px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    
+    .contacto-titulo {
+        font-size: 35px;
+        text-align: left;
+    }
+    
+    .redes-lista {
+        justify-content: flex-start;
+    }
+
+    .contacto-titulo {
+        grid-area: titulo;
+    }
+
+    .contacto-detalle {
+        grid-area: detalle;
+    }
+
+    .contacto-form {
+        grid-area: form;
+    }
+
+    .redes {
+        grid-area: redes;
+    }
+
+    .contacto {
+        display: grid;
+        grid: 
+        "titulo  form" auto
+        "detalle form" 1fr
+        "redes   form" auto/
+        1fr      1fr;
+        align-items: start;
+    }
+}
+
+
